@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.srhdp.newapimvvm'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.srhdp.newapimvvm"
         minSdk 29
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
         buildConfigField("String", "API_KEY", MY_KEY)
@@ -36,8 +36,9 @@ android {
 dependencies {
     def retrofit_version = "2.9.0"
     def coroutines = "1.6.4"
+    def interceptor = "4.10.0"
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -49,9 +50,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines")
 
     // retrofit
-//    implementation "com.squareup.retrofit2:retrofit: $retrofit_version"
-//    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-//    implementation "com.squareup.okhttp3:logging-interceptor:$interceptor"
+    implementation "com.squareup.retrofit2:retrofit: $retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$interceptor"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
