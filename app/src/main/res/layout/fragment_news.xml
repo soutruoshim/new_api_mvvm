@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="@color/layout_background"
+tools:context=".NewsFragment">
+
+<SearchView
+    android:id="@+id/svNews"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".NewsFragment">
+    android:layout_height="wrap_content"
+    android:background="@color/search_background" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="New Fragment" />
-
-</FrameLayout>
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvNews"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+</androidx.recyclerview.widget.RecyclerView>
+<ProgressBar
+    android:id="@+id/progressBar"
+    style="?android:attr/progressBarStyle"
+    android:visibility="invisible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+</LinearLayout>
