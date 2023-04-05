@@ -18,4 +18,12 @@ class UseCaseModule {
     ): GetNewsHeadlinesUseCase {
         return GetNewsHeadlinesUseCase(newsRepository)
     }
+
+    @Singleton
+    @Provides
+    fun provideGetSearchedNewsUseCase(
+        newsRepository: NewsRepository
+    ):GetSearchedNewsUseCase{
+        return GetSearchedNewsUseCase(newsRepository)
+    }
 }
