@@ -5,7 +5,5 @@ import com.srhdp.newapimvvm.domain.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
 
 class SaveNewsUseCase(private val newsRepository: NewsRepository) {
-    fun execute():Flow<List<Article>>{
-        return newsRepository.getSavedNews()
-    }
+    suspend fun execute(article: Article)=newsRepository.saveNews(article)
 }
